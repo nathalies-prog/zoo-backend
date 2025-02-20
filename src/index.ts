@@ -7,6 +7,7 @@ import { enclosureRouter } from "./routes/enclosure-routes.ts";
 import { staffRouter } from "./routes/staff-routes.ts";
 import { salesRouter } from "./routes/sales-routes.ts";
 import {cors}  from 'hono/cors'
+import { donationRouter } from "./routes/donation-routes.ts";
 const { Pool } = pg; 
 config();
 const pool = new Pool({ ssl: { rejectUnauthorized: false } });
@@ -16,6 +17,7 @@ app.route('/animals',animalRouter);
 app.route('/enclosures',enclosureRouter);
 app.route('/staffs',staffRouter);
 app.route('/sales',salesRouter);
+app.route('/donations',donationRouter);
 serve({ fetch: app.fetch, port: 3000 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`);
 });
