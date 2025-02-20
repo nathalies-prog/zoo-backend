@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { StaffController } from "../controller/staff-controller.ts";
+import { StaffController } from "../controller/staff-controller.js";
 import type { Staff } from "../types.ts";
 
 

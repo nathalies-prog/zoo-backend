@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { DonationController } from "../controller/donation-controller.ts";
+import { DonationController } from "../controller/donation-controller.js";
 
 export const donationRouter = new Hono();
 

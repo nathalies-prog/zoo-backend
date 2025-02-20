@@ -1,7 +1,6 @@
 import { Hono } from "hono";
-import { AnimalController } from "../controller/animal-controller.ts";
 import type { Animal, Enclosure } from "../types.ts";
-import { EnclosureController } from "../controller/enclosure-controller.ts";
+import { EnclosureController } from "../controller/enclosure-controller.js";
 
 export const enclosureRouter = new Hono();
 

@@ -1,4 +1,4 @@
-import { getPool } from "../db/db.ts";
+import { getPool } from "../db/db.js";
 
 export class SalesStandController {
   static async getAllSalesStands() {

@@ -1,7 +1,7 @@
 import { Hono } from "hono";
-import { AnimalController } from "../controller/animal-controller.ts";
+import { AnimalController } from "../controller/animal-controller.js";
 import type { Animal } from "../types.ts";
-import { getPool } from "../db/db.ts";
+import { getPool } from "../db/db.js";
 import { HTTPException } from "hono/http-exception";
 
 export const animalRouter = new Hono();

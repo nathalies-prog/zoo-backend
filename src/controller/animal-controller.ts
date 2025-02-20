@@ -1,4 +1,4 @@
-import { getPool } from "../db/db.ts";
+import { getPool } from "../db/db.js";
 import type { Animal } from "../types.ts";
 
 export class AnimalController {

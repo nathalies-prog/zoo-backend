@@ -1,5 +1,4 @@
-import { getFilePathWithoutDefaultDocument } from "hono/utils/filepath";
-import { getPool } from "../db/db.ts";
+import { getPool } from "../db/db.js";
 import type { Enclosure } from "../types.ts";
 
 export class EnclosureController {
