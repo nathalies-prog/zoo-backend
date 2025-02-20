@@ -1,7 +1,7 @@
 import pg from "pg";
 import { PGDATABASE_STRING, PGHOST_STRING, PGPASSWORD_STRING, PGPORT_, PGUSER_STRING } from "../constants.js";
 import dotenv from 'dotenv';
-dotenv.config(); // lädt die Umgebungsvariablen aus der .env-Datei
+dotenv.config(); 
 const { Client, Pool } = pg;
 let client = null;
 let pool = null;
