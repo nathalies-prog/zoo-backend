@@ -18,6 +18,6 @@ app.route('/enclosures',enclosureRouter);
 app.route('/staffs',staffRouter);
 app.route('/sales',salesRouter);
 app.route('/donations',donationRouter);
-serve({ fetch: app.fetch, port: 3000 }, (info) => {
+serve({ fetch: app.fetch, port: 8080 }, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`);
 });
