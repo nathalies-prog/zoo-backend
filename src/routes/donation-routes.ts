@@ -5,7 +5,7 @@ export const donationRouter = new Hono();
 
 donationRouter.get("/", async (c) => {
   try{
-    const donations = DonationController.getAllDonations();
+    const donations = await DonationController.getAllDonations();
     return c.json({donations},200);
   }
   catch(error){
