@@ -13,6 +13,10 @@ config();
 const pool = new Pool({ ssl: { rejectUnauthorized: false } });
 const app = new Hono();
 app.use('*',cors());
+
+app.get('/', (c) => {
+  return c.text('Hello from Zoo BACKEND!🦎');
+});
 app.route('/animals',animalRouter);
 app.route('/enclosures',enclosureRouter);
 app.route('/staffs',staffRouter);
