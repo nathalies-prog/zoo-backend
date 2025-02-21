@@ -6,15 +6,18 @@
     "build": "tsc"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.5.0",
     "@hono/node-server": "^1.13.8",
     "cors": "^2.8.5",
-    "hono": "^4.7.1"
+    "dotenv": "^16.4.7",
+    "hono": "^4.7.1",
+    "pg": "^8.13.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/node": "^20.11.17",
     "bun": "^1.2.2",
-    "typescript": "^5.7.3",
-    "tsx": "^4.7.1"
+    "tsx": "^4.7.1",
+    "typescript": "^5.7.3"
   }
 }
