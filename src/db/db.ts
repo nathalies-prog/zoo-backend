@@ -18,9 +18,7 @@ export function getClient() {
     user: PGUSER_STRING,
     password: PGPASSWORD_STRING,
     database: PGDATABASE_STRING,
-    ssl: {
-      rejectUnauthorized: false,
-    },
+   
   });
   return client;
 }
@@ -36,9 +34,7 @@ export function getPool() {
     password:PGPASSWORD_STRING,
     database: PGDATABASE_STRING,
     max: 20,
-    ssl: {
-      rejectUnauthorized: false,
-    },
+   
   });
 
   return pool;

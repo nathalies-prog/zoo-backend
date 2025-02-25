@@ -1,0 +1,24 @@
+services:
+  database:
+    image: postgres:16.2
+    ports:
+      - 5432:5432
+    volumes:
+      - ./pg-data:/var/lib/postgres/sql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+  pgadmin:
+    image: dpage/pgadmin4:8.3
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: kian@upstrs.io
+      PGADMIN_DEFAULT_PASSWORD: okapi23
+    ports:
+      - 80:80
+    volumes:
+      - ./pgadmin-data:/var/lib/pgadmin
+    depends_on:
+      - database
